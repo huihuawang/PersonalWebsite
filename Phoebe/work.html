@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border: 1px solid black;
+  padding: 0;
+}
+.table-header {
+  background-color: #e6e6fa; }
+h2, table, p, button {
+  font-style: italic;}
+
+tr:hover {
+  background-color: #f0f8ff;
+  transition: background-color 0.3s;}
+
+#tableImage {
+  display: none;
+  margin-top: 20px;
+  width: 500px;
+  height: auto;}
+  
+#toggleBtn {
+  margin: 10px 0;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: #fff;
+  cursor: pointer;}
+#toggleBtn:hover {
+  background-color: #f5f5f5;}
+  
+</style>
+<body>
+
+<h2>Ancient Greece</h2>
+
+<table style="width:100%">
+  <tr class="table-header">
+    <th>Category</th>
+    <th>Key Information</th>
+    <th>Examples</th>
+  </tr>
+  <tr>
+    <td>Civilization Period</td>
+    <td>Classical Period (500-323 BCE) (Golden age of Greek culture)</td>
+    <td>Athens reached its peak; democracy developed</td>
+  </tr>
+  <tr>
+    <td>Core City-States</td>
+    <td>Athens, Sparta</td>
+    <td>Athens: Democracy & art center; Sparta: Military-focused society</td>
+  </tr>
+  <tr>
+    <td>Government Systems</td>
+    <td>Democracy (Athens), Oligarchy (Sparta)</td>
+    <td>Athenian citizens voted on laws (free adult males only)</td>
+  </tr>
+  <tr>
+    <td>Major Achievements</td>
+    <td>Philosophy, Architecture, Drama</td>
+    <td>Philosophers: Plato, Aristotle; Building: Parthenon; Drama: Sophocles' tragedies</td>
+  </tr>
+  <tr>
+    <td>Religion</td>
+    <td>Polytheism (Greek Gods); Olympic Games (honoring Zeus)</td>
+    <td>Key gods: Zeus (king), Athena (wisdom)</td>
+  </tr>
+  <tr>
+    <td>Famous Wars</td>
+    <td>Persian Wars (490-479 BCE), Peloponnesian War (431-404 BCE)</td>
+    <td>Greece defeated Persia; Sparta defeated Athens</td>
+  </tr>
+  
+</table>
+
+<button id="toggleBtn">Click to show/hide image</button>
+
+<img id="tableImage" src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Table related image">
+
+<script>
+const btn = document.getElementById('toggleBtn');
+const img = document.getElementById('tableImage');
+
+btn.addEventListener('click', function() {
+  if (img.style.display === 'none') {
+    img.style.display = 'block';
+    btn.textContent = 'Click to hide image';
+  } else {
+    img.style.display = 'none';
+    btn.textContent = 'Click to show image';
+  }
+});
+</script>
+    
+
+
+<p></p>
+
+</body>
+</html>
+
